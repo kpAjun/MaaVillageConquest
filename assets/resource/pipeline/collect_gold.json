@@ -3,15 +3,15 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -423.41469332901625,
-                "y": 227.11497467320174,
+                "x": -192.80490167663356,
+                "y": -111.96867367258642,
                 "zoom": 1.1908568493649683
             },
             "filename": "collect_gold",
             "version": "v0.11.1"
         }
     },
-    "collect_gold": {
+    "collect_gold_click": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -38,19 +38,51 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 527,
-                "y": 108
+                "x": 655,
+                "y": 124
+            }
+        }
+    },
+    "collect_gold_start": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 202,
+                "y": 314
             }
         },
-        "on_error": [
-            "close_button"
+        "next": [
+            "collect_gold_click",
+            {
+                "name": "close_button",
+                "jump_back": true
+            },
+            {
+                "name": "exit_map",
+                "jump_back": true
+            }
         ]
     },
     "$__mpe_external_close_button_collect_gold": {
         "$__mpe_code": {
             "position": {
-                "x": 1046,
-                "y": 224
+                "x": 652,
+                "y": 411
+            }
+        }
+    },
+    "$__mpe_external_exit_map_collect_gold": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 484
             }
         }
     }

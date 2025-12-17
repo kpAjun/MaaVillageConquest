@@ -49,7 +49,7 @@
     "task": [
         {
             "name": "收取金币",
-            "entry": "collect_gold"
+            "entry": "collect_gold_start"
         }
     ],
     "option": {}

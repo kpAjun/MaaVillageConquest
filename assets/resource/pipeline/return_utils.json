@@ -1,13 +1,13 @@
 {
-    "$__mpe_config_return_home": {
+    "$__mpe_config_return_utils": {
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -947.0378582261633,
-                "y": -57.65849846054107,
-                "zoom": 1.2430877108415177
+                "x": -357.6904235220295,
+                "y": -561.1101932485099,
+                "zoom": 1.1908568493649683
             },
-            "filename": "return_home",
+            "filename": "return_utils",
             "version": "v0.11.1"
         }
     },
@@ -35,13 +35,10 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 957,
-                "y": 235
+                "x": 702,
+                "y": 396
             }
-        },
-        "on_error": [
-            "exit_map"
-        ]
+        }
     },
     "exit_map": {
         "recognition": {
@@ -66,8 +63,8 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 1317,
-                "y": 261
+                "x": 704,
+                "y": 650
             }
         }
     }
