@@ -81,8 +81,8 @@ jobs:
         uses: robinraju/release-downloader@v1
         with:
           repository: MaaXYZ/MaaFramework
-          fileName: "MAA-${{ matrix.os }}-${{ matrix.arch }}*"
-          latest: true
+          fileName: "MAA-win-${{ matrix.arch }}*"
+          tag: "v5.2.6"
           out-file-path: "deps"
           extract: true
 
