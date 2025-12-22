@@ -9,9 +9,9 @@
       },
       "nextOrderNumber": 3,
       "savedViewport": {
-        "x": 728.4548185520101,
-        "y": 236.38424823246862,
-        "zoom": 0.8255901631491953
+        "x": 593.1038753125536,
+        "y": 344.7409307295755,
+        "zoom": 0.9831597005545609
       },
       "filename": "clear_msg",
       "version": "v0.11.4_beta_4"
@@ -44,7 +44,10 @@
         "x": 266,
         "y": -59
       }
-    }
+    },
+    "next": [
+      "open_msg"
+    ]
   },
   "open_msg": {
     "recognition": {
@@ -70,15 +73,12 @@
     "timeout": 1000,
     "$__mpe_code": {
       "position": {
-        "x": -71,
-        "y": -58
+        "x": -65,
+        "y": -62
       }
     },
     "next": [
-      {
-        "name": "close_msg_popup",
-        "jump_back": true
-      }
+      "close_msg_popup"
     ]
   },
   "open_msg_start": {
@@ -97,6 +97,7 @@
         ]
       }
     },
+    "timeout": 1000,
     "$__mpe_code": {
       "position": {
         "x": -389,
