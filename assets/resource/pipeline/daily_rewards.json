@@ -3,12 +3,306 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -9474.556895191305,
-                "y": 120.38710370085846,
+                "x": -10306.238786231497,
+                "y": 172.3589830294589,
                 "zoom": 0.9633099049851328
             },
             "filename": "daily_rewards",
             "version": "v0.12.0"
+        }
+    },
+    "vip_rewards_start": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Starting": "正在收集VIP奖励"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 9760,
+                "y": 124
+            }
+        },
+        "next": [
+            "vip_rewards_open",
+            {
+                "name": "close_button",
+                "jump_back": true
+            },
+            {
+                "name": "exit_map",
+                "jump_back": true
+            }
+        ]
+    },
+    "vip_rewards_open": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "vip_rewards.png"
+                ],
+                "roi": [
+                    434,
+                    158,
+                    568,
+                    173
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "post_delay": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 10117,
+                "y": 44
+            }
+        },
+        "next": [
+            "vip_rewards_menu",
+            "vip_rewards_open"
+        ]
+    },
+    "vip_rewards_collect": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取"
+                ],
+                "roi": [
+                    522,
+                    233,
+                    105,
+                    50
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 10702,
+                "y": 66
+            }
+        },
+        "next": [
+            "training_field_reward_start"
+        ]
+    },
+    "vip_rewards_menu": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "礼包"
+                ],
+                "roi": [
+                    198,
+                    239,
+                    107,
+                    157
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "timeout": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 10435,
+                "y": 75
+            }
+        },
+        "next": [
+            "vip_rewards_collect",
+            "training_field_reward_start"
+        ]
+    },
+    "training_field_reward_start": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Starting": "正在收集演武场奖励"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 11013,
+                "y": 112
+            }
+        },
+        "next": [
+            "training_field_reward_pk_open",
+            {
+                "name": "close_button",
+                "jump_back": true
+            },
+            {
+                "name": "exit_map",
+                "jump_back": true
+            }
+        ]
+    },
+    "training_field_reward_pk_open": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "pk.png"
+                ],
+                "roi": [
+                    434,
+                    158,
+                    568,
+                    173
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.65
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "post_delay": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 11285,
+                "y": 40
+            }
+        },
+        "next": [
+            "training_field_reward_open",
+            "training_field_reward_pk_open"
+        ]
+    },
+    "training_field_reward_open": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "training_field.png"
+                ],
+                "roi": [
+                    300,
+                    153,
+                    696,
+                    262
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.65
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "post_delay": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 11543,
+                "y": 37
+            }
+        },
+        "next": [
+            "training_field_reward_menu",
+            "training_field_reward_open"
+        ]
+    },
+    "training_field_reward_menu": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始"
+                ],
+                "roi": [
+                    549,
+                    605,
+                    158,
+                    67
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "timeout": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 11810,
+                "y": 52
+            }
+        },
+        "next": [
+            "training_field_reward_collect",
+            "training_field_reward_menu"
+        ]
+    },
+    "training_field_reward_collect": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领"
+                ],
+                "roi": [
+                    494,
+                    584,
+                    79,
+                    41
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "timeout": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 12077,
+                "y": 52
+            }
         }
     },
     "collect_gold_click": {
@@ -76,16 +370,16 @@
     "$__mpe_external_close_button_daily_rewards": {
         "$__mpe_code": {
             "position": {
-                "x": 6451,
-                "y": 539
+                "x": 8030,
+                "y": 578
             }
         }
     },
     "$__mpe_external_exit_map_daily_rewards": {
         "$__mpe_code": {
             "position": {
-                "x": 6446,
-                "y": 646
+                "x": 8032,
+                "y": 650
             }
         }
     },
@@ -237,6 +531,7 @@
         },
         "next": [
             "use_free_raffle",
+            "raffle_open",
             "monthly_sub_start"
         ]
     },
@@ -337,7 +632,8 @@
             }
         },
         "next": [
-            "collect_free_sub_reward"
+            "collect_free_sub_reward",
+            "monthly_sub_open"
         ]
     },
     "collect_free_sub_reward": {
@@ -492,7 +788,8 @@
             }
         },
         "next": [
-            "seven_days_collect"
+            "seven_days_collect",
+            "seven_days_sub_open"
         ]
     },
     "seven_days_collect": {
@@ -585,7 +882,8 @@
             }
         },
         "next": [
-            "tower_enter"
+            "tower_enter",
+            "tower_open"
         ]
     },
     "tower_enter": {
@@ -660,8 +958,8 @@
     "$__mpe_external_close_msg_popup_daily_rewards": {
         "$__mpe_code": {
             "position": {
-                "x": 6442,
-                "y": 759
+                "x": 8036,
+                "y": 724
             }
         }
     },
@@ -694,7 +992,8 @@
             }
         },
         "next": [
-            "pet_store_collect"
+            "pet_store_collect",
+            "pet_store_open"
         ]
     },
     "pet_store_start": {
@@ -1011,7 +1310,8 @@
             }
         },
         "next": [
-            "mail_rewards_collect"
+            "mail_rewards_collect",
+            "mail_rewards_open"
         ]
     },
     "mail_rewards_collect": {
@@ -1044,128 +1344,5 @@
         "next": [
             "vip_rewards_start"
         ]
-    },
-    "vip_rewards_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Starting": "正在收集VIP奖励"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 9760,
-                "y": 124
-            }
-        },
-        "next": [
-            "vip_rewards_open",
-            {
-                "name": "close_button",
-                "jump_back": true
-            },
-            {
-                "name": "exit_map",
-                "jump_back": true
-            }
-        ]
-    },
-    "vip_rewards_open": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "vip_rewards.png"
-                ],
-                "roi": [
-                    434,
-                    158,
-                    568,
-                    173
-                ],
-                "green_mask": true
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 10117,
-                "y": 44
-            }
-        },
-        "next": [
-            "vip_rewards_menu"
-        ]
-    },
-    "vip_rewards_menu": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "礼包"
-                ],
-                "roi": [
-                    198,
-                    239,
-                    107,
-                    157
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "timeout": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 10435,
-                "y": 75
-            }
-        },
-        "next": [
-            "vip_rewards_collect"
-        ]
-    },
-    "vip_rewards_collect": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领取"
-                ],
-                "roi": [
-                    522,
-                    233,
-                    105,
-                    50
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 10727,
-                "y": 102
-            }
-        }
     }
 }
