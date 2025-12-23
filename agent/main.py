@@ -14,6 +14,8 @@ def main():
         print("Usage: python main.py <socket_id>")
         print("socket_id is provided by AgentIdentifier.")
         sys.exit(1)
+
+    print("Initializing AgentServer...")
         
     socket_id = sys.argv[-1]
 

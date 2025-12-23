@@ -423,6 +423,9 @@ FodyWeavers.xsd
 # Local History for Visual Studio Code
 .history/
 
+# NiceGUI
+.nicegui/
+
 # Windows Installer files from build outputs
 *.cab
 *.msi

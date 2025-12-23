@@ -1,0 +1,136 @@
+{
+  "$__mpe_config_clear_msg": {
+    "$__mpe_code": {
+      "filePath": "D:\\MAAdev\\MaaVillageConquest\\assets\\resource\\pipeline\\clear_msg.json",
+      "filename": "clear_msg",
+      "lastSyncTime": 1766460410241,
+      "prefix": "",
+      "savedViewport": {
+        "x": 1050.2951188969769,
+        "y": 244.21929736015963,
+        "zoom": 0.9633099049851328
+      },
+      "version": "v0.12.0"
+    }
+  },
+  "close_app_popup": {
+    "$__mpe_code": {
+      "position": {
+        "x": -734,
+        "y": 36
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "open_msg_start"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          1099,
+          91,
+          169,
+          627
+        ],
+        "template": [
+          "app_popup.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "close_msg_popup": {
+    "$__mpe_code": {
+      "position": {
+        "x": 266,
+        "y": -59
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "open_msg"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          488,
+          410,
+          312,
+          107
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "open_msg": {
+    "$__mpe_code": {
+      "position": {
+        "x": -65,
+        "y": -62
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "close_msg_popup"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          456,
+          484,
+          400,
+          64
+        ],
+        "template": [
+          "msg.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1000
+  },
+  "open_msg_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": -389,
+        "y": 20
+      }
+    },
+    "action": {
+      "param": {
+        "target": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "open_msg"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    },
+    "timeout": 1000
+  }
+}

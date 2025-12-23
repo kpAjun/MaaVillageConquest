@@ -1,0 +1,78 @@
+{
+    "$__mpe_config_return_utils": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": 65.93507513127531,
+                "y": -198.89806896839127,
+                "zoom": 0.8882037088902244
+            },
+            "filename": "return_utils",
+            "version": "v0.12.0"
+        }
+    },
+    "close_button": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "close_button.png",
+                    "close_button_covered.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    758,
+                    133,
+                    339,
+                    246
+                ],
+                "threshold": [
+                    0.59
+                ],
+                "order_by": "Score"
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 500
+            }
+        },
+        "post_delay": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 700,
+                "y": 326
+            }
+        }
+    },
+    "exit_map": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "回城"
+                ],
+                "roi": [
+                    998,
+                    591,
+                    84,
+                    107
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "duration": 300
+            }
+        },
+        "post_delay": 1000,
+        "$__mpe_code": {
+            "position": {
+                "x": 700,
+                "y": 698
+            }
+        }
+    }
+}
