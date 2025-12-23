@@ -122,8 +122,14 @@ jobs:
             shopt -s dotglob nullglob
             for src in MFA/*; do
               name=$(basename "$src")
+              # Skip any ._pth files
+              case "$name" in
+                *._pth) echo "Skipping ._pth file: $name"; continue ;;
+              esac
               if [ ! -e "install/$name" ]; then
                 cp -R -v "$src" install/
+                # remove any ._pth files copied into the installed item, recursively
+                find "install/$name" -type f -name "*._pth" -exec rm -v {} \; || true
               else
                 echo "Skipping existing: install/$name"
               fi
@@ -134,6 +140,9 @@ jobs:
 
           mkdir -p install
           cp -v "tools/DependencySetup_依赖库安装.bat" install/
+
+          # Ensure no ._pth files remain in the install directory
+          find install -type f -name "*._pth" -exec rm -v {} \; || true
 
       - uses: actions/upload-artifact@v4
         with:
