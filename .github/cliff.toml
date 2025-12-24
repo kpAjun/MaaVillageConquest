@@ -64,6 +64,7 @@ body = """
 footer = """
 
 在绝大多数情况下你都应该下载Windows x86_64版, 具体开箱方法请参阅README
+
 [如果下载速度不理想, 可以试试Mirror酱CDN!](https://mirrorchyan.com/zh/projects?rid=MaaVillageConquest&os=windows&arch=x64&channel=stable)
 """
 
