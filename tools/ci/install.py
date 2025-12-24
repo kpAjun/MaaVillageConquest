@@ -18,7 +18,7 @@ from configure import configure_ocr_model
 working_dir = Path(__file__).parent.parent.parent.resolve()
 install_path = working_dir / Path("install")
 version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
-
+platform_tag = len(sys.argv) > 2 and sys.argv[2] or ""
 
 def install_deps():
     if not (working_dir / "deps" / "bin").exists():
@@ -28,7 +28,7 @@ def install_deps():
 
     shutil.copytree(
         working_dir / "deps" / "bin",
-        install_path,
+        install_path / "runtimes" / platform_tag / "native",
         ignore=shutil.ignore_patterns(
             "*MaaDbgControlUnit*",
             "*MaaThriftControlUnit*",
