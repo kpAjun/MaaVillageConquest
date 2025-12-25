@@ -48,7 +48,7 @@
     "task": [
         {
             "name": "前期准备",
-            "entry": "close_app_popup_start"
+            "entry": "early_prep"
         },
         {
             "name": "日常领取",
