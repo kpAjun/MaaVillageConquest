@@ -10,9 +10,25 @@ from maa.tasker import Tasker, LoggingLevelEnum
 def check(dirs: List[Path]) -> bool:
     resource = Resource()
 
-    print(f"Checking {len(dirs)} directories...")
+    # Expand any provided parent directories into their immediate child directories
+    expanded: List[Path] = []
+    for d in dirs:
+        if d.is_dir():
+            # If the directory looks like a bundle (has pipeline/model/image/etc) check it directly,
+            # otherwise iterate immediate subdirectories and check each one.
+            has_bundle_files = any((d / name).exists() for name in ("pipeline", "model", "image"))
+            if has_bundle_files:
+                expanded.append(d)
+            else:
+                for child in sorted(d.iterdir()):
+                    if child.is_dir():
+                        expanded.append(child)
+        else:
+            expanded.append(d)
 
-    for dir in dirs:
+    print(f"Checking {len(expanded)} directories...")
+
+    for dir in expanded:
         print(f"Checking {dir}...")
         status = resource.post_bundle(dir).wait().status
         if not status.succeeded:
