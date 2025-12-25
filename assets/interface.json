@@ -52,7 +52,7 @@
         },
         {
             "name": "日常领取",
-            "entry": "collect_gold_start"
+            "entry": "daily_rewards"
         },
         {
             "name": "公会贡献",
