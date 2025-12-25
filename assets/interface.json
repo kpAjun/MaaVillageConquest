@@ -18,7 +18,7 @@
     "mirrorchyan_multiplatform": true,
     "controller": [
         {
-            "name": "桌面端（鼠标托管）",
+            "name": "前台托管(4399)",
             "type": "Win32",
             "win32": {
                 "class_regex": ".*",
@@ -35,7 +35,7 @@
         {
             "name": "4399",
             "path": [
-                "{PROJECT_DIR}/resource"
+                "{PROJECT_DIR}/resource/4399"
             ]
         }
     ],
