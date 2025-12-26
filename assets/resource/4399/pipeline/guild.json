@@ -1,1345 +1,1292 @@
 {
-    "$__mpe_config_guild": {
-        "$__mpe_code": {
-            "prefix": "",
-            "savedViewport": {
-                "x": -11071.203292604767,
-                "y": -98.22812523763287,
-                "zoom": 0.9633099049851328
-            },
-            "filename": "guild",
-            "version": "v0.12.0"
-        }
-    },
-    "guild_enter": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "guild.png"
-                ],
-                "roi": [
-                    219,
-                    632,
-                    699,
-                    67
-                ],
-                "green_mask": true
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 11736,
-                "y": 166
-            }
-        },
-        "next": [
-            "combat_center_start"
-        ]
-    },
-    "guild_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 11494,
-                "y": 258
-            }
-        },
-        "next": [
-            "guild_enter",
-            {
-                "name": "close_button",
-                "jump_back": true
-            },
-            {
-                "name": "exit_map",
-                "jump_back": true
-            }
-        ]
-    },
-    "$__mpe_external_close_button_guild": {
-        "$__mpe_code": {
-            "position": {
-                "x": 13006,
-                "y": 1687
-            }
-        }
-    },
-    "$__mpe_external_exit_map_guild": {
-        "$__mpe_code": {
-            "position": {
-                "x": 13011,
-                "y": 1754
-            }
-        }
-    },
-    "combat_center_reward_1": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    543,
-                    316,
-                    53,
-                    30
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 12714,
-                "y": -534
-            }
-        },
-        "next": [
-            "combat_center_reward_2",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_2": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    541,
-                    411,
-                    56,
-                    29
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 12714,
-                "y": -247
-            }
-        },
-        "next": [
-            "combat_center_reward_3",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_3": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    538,
-                    507,
-                    63,
-                    33
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 12712,
-                "y": 43
-            }
-        },
-        "next": [
-            "combat_center_reward_4",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_4": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    849,
-                    313,
-                    61,
-                    34
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 12712,
-                "y": 334
-            }
-        },
-        "next": [
-            "combat_center_reward_5",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_5": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    848,
-                    410,
-                    62,
-                    34
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 12711,
-                "y": 622
-            }
-        },
-        "next": [
-            "combat_center_reward_6",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_6": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    849,
-                    509,
-                    59,
-                    29
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 12711,
-                "y": 913
-            }
-        },
-        "next": [
-            "combat_center_elite_menu",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_elite_menu": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "精英"
-                ],
-                "roi": [
-                    210,
-                    333,
-                    83,
-                    39
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 13014,
-                "y": -778
-            }
-        },
-        "next": [
-            "combat_center_reward_7",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_7": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    543,
-                    316,
-                    53,
-                    30
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13019,
-                "y": -536
-            }
-        },
-        "next": [
-            "combat_center_reward_8",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_8": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    541,
-                    411,
-                    56,
-                    29
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13018,
-                "y": -247
-            }
-        },
-        "next": [
-            "combat_center_reward_9",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_9": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    538,
-                    507,
-                    63,
-                    33
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13019,
-                "y": 44
-            }
-        },
-        "next": [
-            "combat_center_reward_10",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_10": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    849,
-                    313,
-                    61,
-                    34
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13019,
-                "y": 334
-            }
-        },
-        "next": [
-            "combat_center_reward_11",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_11": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    848,
-                    410,
-                    62,
-                    34
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13023,
-                "y": 623
-            }
-        },
-        "next": [
-            "combat_center_reward_12",
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_reward_12": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    849,
-                    509,
-                    59,
-                    29
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13025,
-                "y": 914
-            }
-        },
-        "next": [
-            "guild_hall_start"
-        ]
-    },
-    "combat_center_enter": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "combat_center.png"
-                ],
-                "roi": [
-                    229,
-                    258,
-                    215,
-                    188
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 12213,
-                "y": 182
-            }
-        },
-        "next": [
-            "combat_center_norm_menu"
-        ]
-    },
-    "combat_center_norm_menu": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "普通"
-                ],
-                "roi": [
-                    209,
-                    266,
-                    84,
-                    37
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 12453,
-                "y": 176
-            }
-        },
-        "next": [
-            "combat_center_reward_1"
-        ]
-    },
-    "combat_center_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Starting": "正在收集兵魂奖励"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 11978,
-                "y": 195
-            }
-        },
-        "next": [
-            "combat_center_enter",
-            {
-                "name": "close_button",
-                "jump_back": true
-            },
-            "guild_enter"
-        ]
-    },
-    "guild_hall_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Starting": "正在完成大厅贡献"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 13338,
-                "y": 176
-            }
-        },
-        "next": [
-            "guild_hall_enter",
-            {
-                "name": "close_button",
-                "jump_back": true
-            }
-        ]
-    },
-    "guild_hall_enter": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "guild_hall.png"
-                ],
-                "roi": [
-                    468,
-                    196,
-                    393,
-                    327
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13605,
-                "y": 133
-            }
-        },
-        "next": [
-            "guild_hall_menu"
-        ]
-    },
-    "guild_hall_menu": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "捐"
-                ],
-                "roi": [
-                    208,
-                    326,
-                    84,
-                    50
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 13860,
-                "y": 130
-            }
-        },
-        "next": [
-            "guild_hall_gold_start"
-        ]
-    },
-    "guild_hall_gold_cont": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "3"
-                ],
-                "roi": [
-                    844,
-                    275,
-                    35,
-                    23
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300,
-                "target": [
-                    917,
-                    279,
-                    12,
-                    10
-                ]
-            }
-        },
-        "inverse": true,
-        "$__mpe_code": {
-            "position": {
-                "x": 14474,
-                "y": -159
-            }
-        }
-    },
-    "guild_hall_gold_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 14176,
-                "y": -68
-            }
-        },
-        "next": [
-            {
-                "name": "guild_hall_gold_cont",
-                "jump_back": true
-            },
-            "guild_hall_diamond_start"
-        ]
-    },
-    "guild_hall_diamond_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 14177,
-                "y": 239
-            }
-        },
-        "next": [
-            {
-                "name": "guild_hall_diamond_cont",
-                "jump_back": true
-            },
-            "guild_hall_soul_start"
-        ]
-    },
-    "guild_hall_diamond_cont": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "3"
-                ],
-                "roi": [
-                    843,
-                    312,
-                    37,
-                    24
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300,
-                "target": [
-                    916,
-                    317,
-                    12,
-                    10
-                ]
-            }
-        },
-        "inverse": true,
-        "$__mpe_code": {
-            "position": {
-                "x": 14475,
-                "y": 149
-            }
-        }
-    },
-    "guild_hall_soul_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 14176,
-                "y": 566
-            }
-        },
-        "next": [
-            {
-                "name": "guild_hall_soul_cont",
-                "jump_back": true
-            },
-            "tech_hall_start"
-        ]
-    },
-    "guild_hall_soul_cont": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "5"
-                ],
-                "roi": [
-                    846,
-                    387,
-                    30,
-                    22
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300,
-                "target": [
-                    918,
-                    391,
-                    11,
-                    9
-                ]
-            }
-        },
-        "inverse": true,
-        "$__mpe_code": {
-            "position": {
-                "x": 14478,
-                "y": 472
-            }
-        }
-    },
-    "tech_hall_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Starting": "正在完成科技贡献"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 14819,
-                "y": 157
-            }
-        },
-        "next": [
-            "tech_hall_enter",
-            {
-                "name": "close_button",
-                "jump_back": true
-            }
-        ]
-    },
-    "tech_hall_enter": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "tech_hall.png"
-                ],
-                "roi": [
-                    721,
-                    150,
-                    184,
-                    158
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 15098,
-                "y": 87
-            }
-        },
-        "next": [
-            "tech_hall_menu"
-        ]
-    },
-    "tech_hall_menu": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "工"
-                ],
-                "roi": [
-                    208,
-                    266,
-                    90,
-                    41
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 15363,
-                "y": 87
-            }
-        },
-        "next": [
-            "tech_hall_tech_sel"
-        ]
-    },
-    "tech_hall_tech_sel": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "捐"
-                ],
-                "roi": [
-                    901,
-                    451,
-                    62,
-                    34
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 15610,
-                "y": 86
-            }
-        },
-        "next": [
-            "tech_hall_gold_start"
-        ]
-    },
-    "tech_hall_gold_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 15957,
-                "y": -156
-            }
-        },
-        "next": [
-            {
-                "name": "tech_hall_gold_cont",
-                "jump_back": true
-            },
-            "tech_hall_diamond_start"
-        ]
-    },
-    "tech_hall_diamond_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 15964,
-                "y": 153
-            }
-        },
-        "next": [
-            {
-                "name": "tech_hall_diamond_cont",
-                "jump_back": true
-            },
-            "tech_hall_soul_start"
-        ]
-    },
-    "tech_hall_soul_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 15963,
-                "y": 474
-            }
-        },
-        "next": [
-            {
-                "name": "tech_hall_soul_cont",
-                "jump_back": true
-            },
-            "welfare_hall_start"
-        ]
-    },
-    "tech_hall_gold_cont": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "3"
-                ],
-                "roi": [
-                    819,
-                    275,
-                    39,
-                    24
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300,
-                "target": [
-                    894,
-                    280,
-                    12,
-                    12
-                ]
-            }
-        },
-        "inverse": true,
-        "$__mpe_code": {
-            "position": {
-                "x": 16207,
-                "y": -248
-            }
-        }
-    },
-    "tech_hall_diamond_cont": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "3"
-                ],
-                "roi": [
-                    820,
-                    310,
-                    37,
-                    25
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300,
-                "target": [
-                    893,
-                    316,
-                    11,
-                    9
-                ]
-            }
-        },
-        "inverse": true,
-        "$__mpe_code": {
-            "position": {
-                "x": 16205,
-                "y": 60
-            }
-        }
-    },
-    "tech_hall_soul_cont": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "5"
-                ],
-                "roi": [
-                    821,
-                    386,
-                    40,
-                    25
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300,
-                "target": [
-                    894,
-                    392,
-                    12,
-                    9
-                ]
-            }
-        },
-        "inverse": true,
-        "$__mpe_code": {
-            "position": {
-                "x": 16205,
-                "y": 384
-            }
-        }
-    },
-    "welfare_hall_start": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Starting": "正在收集联盟福利"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 16542,
-                "y": 132
-            }
-        },
-        "next": [
-            "welfare_hall_enter",
-            {
-                "name": "close_button",
-                "jump_back": true
-            }
-        ]
-    },
-    "welfare_hall_enter": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "welfare_hall.png"
-                ],
-                "roi": [
-                    466,
-                    482,
-                    220,
-                    181
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 16824,
-                "y": 84
-            }
-        },
-        "next": [
-            "welfare_hall_menu_main"
-        ]
-    },
-    "welfare_hall_menu_main": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "大厅"
-                ],
-                "roi": [
-                    208,
-                    266,
-                    90,
-                    41
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 17099,
-                "y": 76
-            }
-        },
-        "next": [
-            "welfare_hall_collect_main"
-        ]
-    },
-    "welfare_hall_collect_main": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    743,
-                    546,
-                    87,
-                    45
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 17372,
-                "y": 76
-            }
-        },
-        "next": [
-            "welfare_hall_menu_gold"
-        ]
-    },
-    "welfare_hall_menu_gold": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "活跃"
-                ],
-                "roi": [
-                    205,
-                    319,
-                    96,
-                    57
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 17649,
-                "y": 75
-            }
-        }
-    },
-    "welfare_hall_collect_gold": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "领"
-                ],
-                "roi": [
-                    738,
-                    413,
-                    73,
-                    37
-                ]
-            }
-        },
-        "action": {
-            "type": "LongPress",
-            "param": {
-                "duration": 300
-            }
-        },
-        "post_delay": 1000,
-        "$__mpe_code": {
-            "position": {
-                "x": 17907,
-                "y": 75
-            }
-        }
+  "$__mpe_config_guild": {
+    "$__mpe_code": {
+      "filePath": "D:\\MAAdev\\MaaVillageConquest\\assets\\resource\\4399\\pipeline\\guild.json",
+      "filename": "guild",
+      "isDeleted": true,
+      "lastSyncTime": 1766724536333,
+      "prefix": "",
+      "savedViewport": {
+        "x": -5092,
+        "y": 330,
+        "zoom": 0.34
+      },
+      "version": "v0.13.0"
     }
+  },
+  "$__mpe_external_close_button_guild": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14383,
+        "y": -502
+      }
+    }
+  },
+  "$__mpe_external_exit_map_guild": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14383,
+        "y": -574
+      }
+    }
+  },
+  "combat_center_collect": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13167,
+        "y": 474
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "recognition": {
+      "param": {
+        "roi": [
+          539,
+          317,
+          368,
+          221
+        ],
+        "template": [
+          "collect_button.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "combat_center_elite_menu": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12912,
+        "y": 236
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "combat_center_collect"
+      },
+      "combat_center_elite_menu_verify"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "精英"
+        ],
+        "roi": [
+          210,
+          333,
+          83,
+          39
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "combat_center_elite_menu_verify": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13168,
+        "y": 233
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "guild_hall_start"
+    ],
+    "recognition": {
+      "param": {
+        "lower": [
+          [
+            255,
+            236,
+            119
+          ]
+        ],
+        "roi": [
+          280,
+          368,
+          13,
+          9
+        ],
+        "upper": [
+          [
+            255,
+            236,
+            119
+          ]
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "combat_center_enter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12143,
+        "y": 213
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "combat_center_norm_menu"
+      }
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          229,
+          258,
+          215,
+          188
+        ],
+        "template": [
+          "combat_center.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1000
+  },
+  "combat_center_norm_menu": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12394,
+        "y": 205
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "combat_center_collect"
+      },
+      "combat_center_norm_menu_verify"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "通"
+        ],
+        "roi": [
+          209,
+          266,
+          84,
+          37
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "combat_center_norm_menu_verify": {
+    "$__mpe_code": {
+      "position": {
+        "x": 12656,
+        "y": 205
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "combat_center_elite_menu"
+      }
+    ],
+    "recognition": {
+      "param": {
+        "lower": [
+          [
+            255,
+            236,
+            119
+          ]
+        ],
+        "roi": [
+          281,
+          299,
+          11,
+          10
+        ],
+        "upper": [
+          [
+            255,
+            236,
+            119
+          ]
+        ]
+      },
+      "type": "ColorMatch"
+    },
+    "timeout": 1000
+  },
+  "combat_center_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11874,
+        "y": -31
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Starting": "正在收集兵魂奖励"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "close_button"
+      },
+      {
+        "jump_back": true,
+        "name": "combat_center_enter"
+      },
+      "guild_hall_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "guild": {
+    "$__mpe_code": {
+      "position": {
+        "x": 10744,
+        "y": -3
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "guild_enter_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "guild_end": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18368,
+        "y": -60
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "StopTask"
+    },
+    "recognition": {
+      "param": {
+        "lower": [
+          [
+            190,
+            190,
+            190
+          ]
+        ],
+        "roi": [
+          750,
+          427,
+          7,
+          7
+        ],
+        "upper": [
+          [
+            202,
+            202,
+            202
+          ]
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "guild_enter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11324,
+        "y": -94
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "guild_enter_verify"
+    ],
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          219,
+          632,
+          699,
+          67
+        ],
+        "template": [
+          "guild.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1000
+  },
+  "guild_enter_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11038,
+        "y": -30
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Starting": "正在进入联盟面板"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "guild_enter"
+      },
+      {
+        "jump_back": true,
+        "name": "close_button"
+      },
+      {
+        "jump_back": true,
+        "name": "exit_map"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "guild_enter_verify": {
+    "$__mpe_code": {
+      "position": {
+        "x": 11595,
+        "y": -34
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "combat_center_start"
+    ],
+    "recognition": {
+      "param": {
+        "roi": [
+          229,
+          258,
+          215,
+          188
+        ],
+        "template": [
+          "combat_center.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "guild_hall_diamond_cont": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14706,
+        "y": 458
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300,
+        "target": [
+          916,
+          317,
+          12,
+          10
+        ]
+      },
+      "type": "LongPress"
+    },
+    "inverse": true,
+    "recognition": {
+      "param": {
+        "expected": [
+          "3"
+        ],
+        "roi": [
+          843,
+          312,
+          37,
+          24
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "guild_hall_diamond_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14371,
+        "y": 551
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "guild_hall_diamond_cont"
+      },
+      "guild_hall_soul_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "guild_hall_enter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13785,
+        "y": 310
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "guild_hall_menu"
+      }
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          468,
+          196,
+          393,
+          327
+        ],
+        "template": [
+          "guild_hall.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1000
+  },
+  "guild_hall_gold_cont": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14706,
+        "y": 143
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300,
+        "target": [
+          917,
+          279,
+          12,
+          10
+        ]
+      },
+      "type": "LongPress"
+    },
+    "inverse": true,
+    "recognition": {
+      "param": {
+        "expected": [
+          "3"
+        ],
+        "roi": [
+          844,
+          275,
+          35,
+          23
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "guild_hall_gold_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14371,
+        "y": 187
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "guild_hall_gold_cont"
+      },
+      "guild_hall_diamond_start"
+    ],
+    "recognition": {
+      "param": {
+        "lower": [
+          [
+            255,
+            236,
+            119
+          ]
+        ],
+        "roi": [
+          278,
+          367,
+          9,
+          7
+        ],
+        "upper": [
+          [
+            255,
+            236,
+            119
+          ]
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "guild_hall_menu": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14053,
+        "y": 310
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "guild_hall_gold_start"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "捐"
+        ],
+        "roi": [
+          208,
+          326,
+          84,
+          50
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "guild_hall_soul_cont": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14706,
+        "y": 787
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300,
+        "target": [
+          918,
+          391,
+          11,
+          9
+        ]
+      },
+      "type": "LongPress"
+    },
+    "inverse": true,
+    "recognition": {
+      "param": {
+        "expected": [
+          "5"
+        ],
+        "roi": [
+          846,
+          387,
+          30,
+          22
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "guild_hall_soul_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14373,
+        "y": 881
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "guild_hall_soul_cont"
+      },
+      "tech_hall_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "guild_hall_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 13448,
+        "y": -41
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Starting": "正在完成大厅贡献"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "close_button"
+      },
+      {
+        "jump_back": true,
+        "name": "guild_hall_enter"
+      },
+      "tech_hall_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "tech_hall_diamond_cont": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16233,
+        "y": 456
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300,
+        "target": [
+          893,
+          316,
+          11,
+          9
+        ]
+      },
+      "type": "LongPress"
+    },
+    "inverse": true,
+    "recognition": {
+      "param": {
+        "expected": [
+          "3"
+        ],
+        "roi": [
+          820,
+          310,
+          37,
+          25
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "tech_hall_diamond_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15980,
+        "y": 549
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "tech_hall_diamond_cont"
+      },
+      "tech_hall_soul_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "tech_hall_enter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15215,
+        "y": 297
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "tech_hall_menu"
+      }
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          721,
+          150,
+          184,
+          158
+        ],
+        "template": [
+          "tech_hall.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1000
+  },
+  "tech_hall_gold_cont": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16233,
+        "y": 146
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300,
+        "target": [
+          894,
+          280,
+          12,
+          12
+        ]
+      },
+      "type": "LongPress"
+    },
+    "inverse": true,
+    "recognition": {
+      "param": {
+        "expected": [
+          "3"
+        ],
+        "roi": [
+          819,
+          275,
+          39,
+          24
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "tech_hall_gold_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15980,
+        "y": 208
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "tech_hall_gold_cont"
+      },
+      "tech_hall_diamond_start"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "捐"
+        ],
+        "roi": [
+          227,
+          271,
+          47,
+          28
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "tech_hall_menu": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15452,
+        "y": 298
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "tech_hall_tech_sel"
+      }
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "工"
+        ],
+        "roi": [
+          208,
+          266,
+          90,
+          41
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "tech_hall_soul_cont": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16233,
+        "y": 782
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300,
+        "target": [
+          894,
+          392,
+          12,
+          9
+        ]
+      },
+      "type": "LongPress"
+    },
+    "inverse": true,
+    "recognition": {
+      "param": {
+        "expected": [
+          "5"
+        ],
+        "roi": [
+          821,
+          386,
+          40,
+          25
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "tech_hall_soul_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15975,
+        "y": 875
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "tech_hall_soul_cont"
+      },
+      "welfare_hall_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "tech_hall_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 14953,
+        "y": -52
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Starting": "正在完成科技贡献"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "close_button"
+      },
+      {
+        "jump_back": true,
+        "name": "tech_hall_enter"
+      },
+      "welfare_hall_start"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "tech_hall_tech_sel": {
+    "$__mpe_code": {
+      "position": {
+        "x": 15691,
+        "y": 298
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "tech_hall_gold_start"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "捐"
+        ],
+        "roi": [
+          901,
+          451,
+          62,
+          34
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "welfare_hall_collect_gold": {
+    "$__mpe_code": {
+      "position": {
+        "x": 18108,
+        "y": 279
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "guild_end"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "领"
+        ],
+        "roi": [
+          738,
+          413,
+          73,
+          37
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "welfare_hall_collect_main": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17287,
+        "y": 282
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      "welfare_hall_collect_main_verify"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "领"
+        ],
+        "roi": [
+          743,
+          546,
+          87,
+          45
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "welfare_hall_collect_main_verify": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17579,
+        "y": 326
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "welfare_hall_menu_gold"
+      }
+    ],
+    "recognition": {
+      "param": {
+        "lower": [
+          [
+            190,
+            190,
+            190
+          ]
+        ],
+        "roi": [
+          762,
+          564,
+          5,
+          10
+        ],
+        "upper": [
+          [
+            202,
+            202,
+            202
+          ]
+        ]
+      },
+      "type": "ColorMatch"
+    }
+  },
+  "welfare_hall_enter": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16792,
+        "y": 290
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "welfare_hall_menu_main"
+      }
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "roi": [
+          466,
+          482,
+          220,
+          181
+        ],
+        "template": [
+          "welfare_hall.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "timeout": 1000
+  },
+  "welfare_hall_menu_gold": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17855,
+        "y": 279
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "welfare_hall_collect_gold"
+      }
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "活跃"
+        ],
+        "roi": [
+          205,
+          319,
+          96,
+          57
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "welfare_hall_menu_main": {
+    "$__mpe_code": {
+      "position": {
+        "x": 17041,
+        "y": 282
+      }
+    },
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "welfare_hall_collect_main"
+      }
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "大厅"
+        ],
+        "roi": [
+          208,
+          266,
+          90,
+          41
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 1000
+  },
+  "welfare_hall_start": {
+    "$__mpe_code": {
+      "position": {
+        "x": 16482,
+        "y": -42
+      }
+    },
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Starting": "正在收集联盟福利"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "close_button"
+      },
+      {
+        "jump_back": true,
+        "name": "welfare_hall_enter"
+      },
+      "guild_end"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  }
 }
