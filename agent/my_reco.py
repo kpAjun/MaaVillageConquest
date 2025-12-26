@@ -44,5 +44,5 @@ class MyRecongition(CustomRecognition):
                     )
 
         return CustomRecognition.AnalyzeResult(
-            box=(0, 0, 0, 0), detail="Task Failed"
+            box=None, detail={}
         )
