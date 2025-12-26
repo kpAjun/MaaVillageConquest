@@ -3,12 +3,13 @@
     "$__mpe_code": {
       "filePath": "D:\\MAAdev\\MaaVillageConquest\\assets\\resource\\4399\\pipeline\\daily_rewards.json",
       "filename": "daily_rewards",
-      "lastSyncTime": 1766668443781,
+      "isDeleted": true,
+      "lastSyncTime": 1766735557703,
       "prefix": "",
       "savedViewport": {
-        "x": -3327,
-        "y": 381,
-        "zoom": 0.34
+        "x": -7438,
+        "y": 268,
+        "zoom": 0.81
       },
       "version": "v0.13.0"
     }
@@ -849,7 +850,8 @@
     "recognition": {
       "param": {
         "expected": [
-          "已使用"
+          "已使用",
+          "未达成"
         ],
         "roi": [
           738,
@@ -1588,8 +1590,8 @@
   "vip_rewards_open": {
     "$__mpe_code": {
       "position": {
-        "x": 9856,
-        "y": -17
+        "x": 9858,
+        "y": -33
       }
     },
     "action": {
@@ -1616,6 +1618,9 @@
         ],
         "template": [
           "vip_rewards.png"
+        ],
+        "threshold": [
+          0.6
         ]
       },
       "type": "TemplateMatch"
