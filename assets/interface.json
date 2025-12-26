@@ -8,17 +8,17 @@
     "description": "《村长征战团》小助手，解放双手，轻松游戏！",
     "contact": "kpAjun@outlook.com",
     "license": "AGPL-3.0",
-    "welcome": "欢迎使用MaaVC！",
+    "welcome": "感谢您使用MaaVC! 本项目开源免费, 欢迎前往GitHub主页了解更多信息并点一个免费的Star支持作者! 如果您购买了该工具, 请确保没有卖家提供了工具以外的额外服务, 否则可能已经上当受骗。如果您身处国内且下载速度不理想, 请点击左下角设置->更新设置, 咨询Mirror酱分发服务。",
     // 填写项目地址和版本号可实现自动更新功能
     "github": "https://github.com/kpAjun/MaaVillageConquest",
-    "version": "1.0.0",
+    "version": "1.0.1-beta.1",
     // Mirror酱为第三方分发服务，新项目默认关闭
     // 若有需要请联系 Mirror酱 开通，直接自行开启是无法使用的
     "mirrorchyan_rid": "MaaVillageConquest",
     "mirrorchyan_multiplatform": true,
     "controller": [
         {
-            "name": "桌面端（鼠标托管）",
+            "name": "前台托管(4399)",
             "type": "Win32",
             "win32": {
                 "class_regex": ".*",
@@ -35,24 +35,24 @@
         {
             "name": "4399",
             "path": [
-                "{PROJECT_DIR}/resource"
+                "./resource/4399"
             ]
         }
     ],
     "agent": {
         "child_exec": "./python/python.exe",
         "child_args": [
-            "{PROJECT_DIR}/agent/main.py"
+            "./agent/main.py"
         ]
     },
     "task": [
         {
             "name": "前期准备",
-            "entry": "close_app_popup_start"
+            "entry": "early_prep"
         },
         {
             "name": "日常领取",
-            "entry": "collect_gold_start"
+            "entry": "daily_rewards"
         },
         {
             "name": "公会贡献",
